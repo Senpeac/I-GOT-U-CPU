@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ชำระเงิน | NeonByte</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a class="logo" href="index.html">NEON<span>BYTE</span></a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="index.html#products">สินค้า</a>
+        <a href="index.html#about">เกี่ยวกับเรา</a>
+        <a href="index.html#contact">ติดต่อ</a>
+        <a href="cart.html">ตะกร้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="billing-wrapper">
+      <h2>ข้อมูลจัดส่ง & ชำระเงิน</h2>
+      <form id="billing-form">
+        <label>
+          ชื่อ-นามสกุลผู้รับสินค้า
+          <input type="text" name="fullname" required>
+        </label>
+        <label>
+          เบอร์โทรศัพท์
+          <input type="tel" name="phone" required>
+        </label>
+        <label>
+          ที่อยู่จัดส่ง
+          <textarea name="address" rows="3" required></textarea>
+        </label>
+        <label>
+          จังหวัด
+          <input type="text" name="province" required>
+        </label>
+        <label>
+          รหัสไปรษณีย์
+          <input type="text" name="zipcode" required>
+        </label>
+        <label>
+          วิธีการชำระเงิน
+          <select name="payment" required>
+            <option value="">-- เลือกวิธีชำระเงิน --</option>
+            <option value="cod">ชำระปลายทาง</option>
+            <option value="transfer">โอนผ่านธนาคาร</option>
+            <option value="credit">บัตรเครดิต/เดบิต</option>
+          </select>
+        </label>
+        <div class="form-actions">
+          <button class="btn-primary" type="submit">ยืนยันคำสั่งซื้อ</button>
+        </div>
+      </form>
+
+      <div class="order-summary">
+        <!-- summary injected by script -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>NeonByte HQ</h4>
+        <p>99/9 ถนนอนาคต ตำบลไฮเทค จังหวัดกรุงเทพมหานคร 10240</p>
+      </div>
+      <div>
+        <h4>ติดต่อเรา</h4>
+        <p>โทร: 02-123-4567</p>
+        <p>Email: hello@neonbyte.store</p>
+      </div>
+      <div>
+        <h4>โซเชียล</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

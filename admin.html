@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ผู้ดูแลระบบ | NeonByte</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a class="logo" href="index.html">NEON<span>BYTE</span></a>
+      <nav class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="index.html#products">สินค้า</a>
+        <a href="index.html#about">เกี่ยวกับเรา</a>
+        <a href="index.html#contact">ติดต่อ</a>
+        <a href="cart.html">ตะกร้า</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="admin-login">
+      <h2>เข้าสู่ระบบผู้ดูแล</h2>
+      <form id="admin-login-form">
+        <label>
+          อีเมล
+          <input type="email" name="email" placeholder="admin@neonbyte.com" required>
+        </label>
+        <label>
+          รหัสผ่าน
+          <input type="password" name="password" placeholder="********" required>
+        </label>
+        <div class="form-actions">
+          <button class="btn-primary" type="submit">เข้าสู่ระบบ</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="admin-wrapper">
+      <div class="admin-dashboard">
+        <div class="product-form">
+          <div class="form-header" style="display:flex;justify-content:space-between;align-items:center;">
+            <h2>จัดการสินค้า</h2>
+            <button class="btn-secondary" id="admin-logout">ออกจากระบบ</button>
+          </div>
+          <form id="product-form">
+            <label>
+              รหัสสินค้า (ถ้าต้องการแก้ไขให้ใส่รหัสที่มีอยู่)
+              <input type="text" name="id" placeholder="pc-phantom">
+            </label>
+            <label>
+              ชื่อสินค้า
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              ประเภทสินค้า
+              <input type="text" name="category" required>
+            </label>
+            <label>
+              ราคาสินค้า (บาท)
+              <input type="number" name="price" min="0" required>
+            </label>
+            <label>
+              ลิงก์รูปภาพสินค้า
+              <input type="url" name="image" placeholder="https://">
+            </label>
+            <div class="form-actions">
+              <button class="btn-primary" type="submit">บันทึกสินค้า</button>
+              <button class="btn-secondary" type="reset">ล้างฟอร์ม</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="product-table">
+          <h2>รายการสินค้า</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>รหัส</th>
+                <th>ชื่อสินค้า</th>
+                <th>หมวดหมู่</th>
+                <th>ราคา</th>
+                <th>จัดการ</th>
+              </tr>
+            </thead>
+            <tbody id="product-table-body">
+              <!-- populated by script -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>NeonByte HQ</h4>
+        <p>99/9 ถนนอนาคต ตำบลไฮเทค จังหวัดกรุงเทพมหานคร 10240</p>
+      </div>
+      <div>
+        <h4>ติดต่อเรา</h4>
+        <p>โทร: 02-123-4567</p>
+        <p>Email: hello@neonbyte.store</p>
+      </div>
+      <div>
+        <h4>โซเชียล</h4>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
